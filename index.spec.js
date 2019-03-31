@@ -1,4 +1,4 @@
-import { Golondrina } from './index';
+import { Golondrina, GolondrinasInmutables as GI} from './index';
 
 describe("pepita básica", () => {
   it("deberia volar y consumir energia", () => {
@@ -13,3 +13,10 @@ describe("pepita básica", () => {
     expect(pepita.energia).toEqual(38)
   })
 })
+
+describe("pepita inmutable", () => {
+  it("deberia volar y consumir energia", () => {
+    const pepita = GI.volar(GI.crear("pepita"), 3)
+    expect(pepita).toMatchObject({nombre: "pepita", edad: 1, energia: 21})
+  })
+});
