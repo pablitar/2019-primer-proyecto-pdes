@@ -17,6 +17,6 @@ describe("pepita básica", () => {
 describe("pepita inmutable", () => {
   it("deberia volar y consumir energia", () => {
     const pepita = GI.volar(GI.crear("pepita"), 3)
-    expect(pepita).toMatchObject({nombre: "pepita", edad: 1, energia: 22})
+    expect(pepita).toMatchObject({nombre: "pepita", edad: 1, energia: 21})
   })
 });
